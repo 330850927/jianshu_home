@@ -8,7 +8,6 @@ export const HeaderContent = styled.div`
     min-width:768px;
     max-width:1440px;
     margin:0 auto;
-    background:rgba(0,0,0,0.2);
     height:56px;
     position:relative;
 `;
@@ -30,5 +29,70 @@ export const Nav=styled.div`
     width:960px;
     height:56px;
     margin:0 auto;
-    background:red;
+    overflow:hidden;
+    padding-right:50px;
+    box-sizing:border-box;
+`;
+export const NavItem=styled.div`
+    line-height:56px;
+    padding:0 15px;
+    font-size:17px;
+    color:#333;
+    &.left{
+        float:left;
+    }
+    &.right{
+        float:right;
+        color:#969696;
+    }
+    &.active{
+        color:#ea6f5a;
+    }
+`;
+export const NavSearch=styled.input.attrs({
+    placeholder:'搜索'
+})`
+    width:160px;
+    height:38px;
+    outline:0;
+    border:1px solid #eee;
+    border-radius:40px;
+    background:#eee;
+    margin-top:9px;
+    margin-left:20px;
+    padding:0 40px 0 20px;
+    font-size:14px;
+    box-sizing:border-box;
+    &::placeholder{
+        color:#999;
+    }
+`;
+export const Addition=styled.div`
+    position:absolute;
+    z-index:10;
+    right:0;
+    top:0;
+    height:56px;
+`;
+export const Button=styled.div`
+    float:right;
+    line-height:36px;
+    height:38px;
+    border-radius:19px;
+    margin-top:9px;
+    border:1px solid #ec6149;
+    margin-right:20px;
+    padding:0 22px;
+    font-size:15px;
+    box-sizing:border-box;
+    &.reg{
+        color:#ec6149;
+    }
+    &.reg:hover{
+        background:#FEF7F6;
+    }
+    &.writing{
+        color:#fff;
+        background:#ec6149;
+    }
 `;
