@@ -1,14 +1,17 @@
-import React, {Fragment} from 'react';
+import React from 'react';
+import {Provider} from 'react-redux';
+import store from './store';
 import Header from './common/header';
-import {
-    GlobalStyle,
-} from './style';
+import {GlobalStyle} from './style';
+import {IconFontStyle} from "./statics/iconfont/iconfont";
+
 function App() {
   return (
-      <Fragment>
+      <Provider store={store}>
           <GlobalStyle/>
+          <IconFontStyle/>
           <Header/>
-      </Fragment>
+      </Provider>
   );
 }
 
