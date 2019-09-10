@@ -10,8 +10,10 @@ import {
     NavItem,
     SearchWrapper,
     NavSearch,
+    SearchInfo,
     Addition,
-    Button
+    Button,
+
 } from './style';
 
 class Header extends Component{
@@ -44,6 +46,9 @@ class Header extends Component{
                             <i
                                 className={this.props.focused?'focused iconfont':'iconfont'}
                             >&#xe614;</i>
+                            <SearchInfo>
+
+                            </SearchInfo>
                         </SearchWrapper>
                     </Nav>
                     <Addition>
@@ -60,7 +65,7 @@ class Header extends Component{
 }
 const mapState=(state)=>{
     return{
-        focused:state.header.focused
+        focused:state.getIn(['header','focused'])
     }
 };
 const mapDispatch=(dispatch)=>{

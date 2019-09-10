@@ -29,7 +29,6 @@ export const Nav=styled.div`
     width:960px;
     height:56px;
     margin:0 auto;
-    overflow:hidden;
     padding-right:50px;
     box-sizing:border-box;
 `;
@@ -100,6 +99,17 @@ export const NavSearch=styled.input.attrs({
     &.slide-exit-active{
         width:160px;
     }
+`;
+export const SearchInfo=styled.div`
+    position:absolute;
+    left:20px;
+    top:56px;
+    width:240px;
+    padding:0 20px;
+    background:#fff;
+    height:100px;
+    border:1px solid #f0f0f0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
 `;
 export const Addition=styled.div`
     position:absolute;
